@@ -1,0 +1,16 @@
+{
+  "_source": "testcases/customer/customer-management.md (Test data fields)",
+  "invalidEmail": "abc@",
+  "existingEmail": "an.nguyen@example.com",
+  "phoneBoundary": {
+    "invalid": [
+      { "value": "091234567", "note": "9 chữ số" },
+      { "value": "09123456789", "note": "11 chữ số" },
+      { "value": "1912345678", "note": "không bắt đầu bằng 0" }
+    ],
+    "valid": [{ "value": "0912345678", "note": "10 chữ số, bắt đầu bằng 0" }]
+  },
+  "nameLength": { "max": 100, "overMax": 101 },
+  "searchKeywordLowercase": "nguyễn văn an",
+  "searchExpectedName": "Nguyễn Văn An"
+}

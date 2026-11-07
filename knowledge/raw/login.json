@@ -1,0 +1,222 @@
+{
+  "name": "login",
+  "route": "/login",
+  "url": "http://localhost:4000/login",
+  "finalUrl": "http://localhost:4000/login",
+  "requiresAuth": false,
+  "exploredAt": "2026-11-07T11:57:49.800Z",
+  "title": "Đăng nhập · QA Demo Shop",
+  "headings": [
+    {
+      "level": 1,
+      "text": "Đăng nhập"
+    }
+  ],
+  "elements": [
+    {
+      "idx": "1",
+      "tag": "input",
+      "role": "textbox",
+      "inputType": "text",
+      "name": "Tên đăng nhập",
+      "label": "Tên đăng nhập",
+      "placeholder": null,
+      "testId": null,
+      "id": "username",
+      "nameAttr": "username",
+      "value": null,
+      "text": "",
+      "href": null,
+      "required": false,
+      "disabled": false,
+      "checked": null,
+      "selected": null,
+      "current": null,
+      "constraints": {
+        "autocomplete": "username"
+      },
+      "options": null,
+      "group": null,
+      "form": "login-form",
+      "container": null,
+      "rowScoped": null,
+      "selector": "page.getByRole('textbox', { name: 'Tên đăng nhập' })",
+      "strategy": "role",
+      "scope": "page"
+    },
+    {
+      "idx": "2",
+      "tag": "input",
+      "role": null,
+      "inputType": "password",
+      "name": "Mật khẩu",
+      "label": "Mật khẩu",
+      "placeholder": null,
+      "testId": null,
+      "id": "password",
+      "nameAttr": "password",
+      "value": null,
+      "text": "",
+      "href": null,
+      "required": false,
+      "disabled": false,
+      "checked": null,
+      "selected": null,
+      "current": null,
+      "constraints": {
+        "type": "password",
+        "autocomplete": "current-password"
+      },
+      "options": null,
+      "group": null,
+      "form": "login-form",
+      "container": null,
+      "rowScoped": null,
+      "selector": "page.getByLabel('Mật khẩu')",
+      "strategy": "label",
+      "scope": "page"
+    },
+    {
+      "idx": "3",
+      "tag": "input",
+      "role": "checkbox",
+      "inputType": "checkbox",
+      "name": "Ghi nhớ đăng nhập",
+      "label": "Ghi nhớ đăng nhập",
+      "placeholder": null,
+      "testId": null,
+      "id": "remember",
+      "nameAttr": "remember",
+      "value": "on",
+      "text": "",
+      "href": null,
+      "required": false,
+      "disabled": false,
+      "checked": false,
+      "selected": null,
+      "current": null,
+      "constraints": {
+        "type": "checkbox"
+      },
+      "options": null,
+      "group": null,
+      "form": "login-form",
+      "container": null,
+      "rowScoped": null,
+      "selector": "page.getByRole('checkbox', { name: 'Ghi nhớ đăng nhập' })",
+      "strategy": "role",
+      "scope": "page"
+    },
+    {
+      "idx": "4",
+      "tag": "button",
+      "role": "button",
+      "inputType": null,
+      "name": "Đăng nhập",
+      "label": null,
+      "placeholder": null,
+      "testId": null,
+      "id": null,
+      "nameAttr": null,
+      "value": null,
+      "text": "Đăng nhập",
+      "href": null,
+      "required": false,
+      "disabled": false,
+      "checked": null,
+      "selected": null,
+      "current": null,
+      "constraints": {
+        "type": "submit"
+      },
+      "options": null,
+      "group": null,
+      "form": "login-form",
+      "container": null,
+      "rowScoped": null,
+      "selector": "page.getByRole('button', { name: 'Đăng nhập' })",
+      "strategy": "role",
+      "scope": "page"
+    }
+  ],
+  "rowRepeats": {},
+  "tables": [],
+  "dialogs": [],
+  "tablists": [],
+  "navs": [],
+  "liveRegions": [
+    {
+      "role": "alert",
+      "live": null,
+      "testId": null,
+      "id": "login-error",
+      "visible": false,
+      "text": ""
+    },
+    {
+      "role": "status",
+      "live": "polite",
+      "testId": "toast",
+      "id": "toast",
+      "visible": false,
+      "text": ""
+    }
+  ],
+  "outgoing": [],
+  "testIdElements": [
+    {
+      "testId": "toast",
+      "tag": "div",
+      "role": "status",
+      "visible": false,
+      "text": ""
+    }
+  ],
+  "texts": [
+    "Đăng nhập",
+    "Tên đăng nhập",
+    "Mật khẩu",
+    "Ghi nhớ đăng nhập"
+  ],
+  "ariaSnapshot": "- main:\n  - heading \"Đăng nhập\" [level=1]\n  - text: Tên đăng nhập\n  - textbox \"Tên đăng nhập\"\n  - paragraph\n  - text: Mật khẩu\n  - textbox \"Mật khẩu\"\n  - paragraph\n  - checkbox \"Ghi nhớ đăng nhập\"\n  - text: Ghi nhớ đăng nhập\n  - button \"Đăng nhập\"",
+  "screenshot": "D:\\AutoUITest\\knowledge\\screenshots\\login.png",
+  "states": [
+    {
+      "name": "empty-submit",
+      "description": "Submit the login form with empty fields to capture validation messages",
+      "steps": [
+        "click role=button[name=\"Đăng nhập\"]"
+      ],
+      "newElements": [],
+      "appearedTexts": [
+        "Vui lòng nhập tên đăng nhập",
+        "Vui lòng nhập mật khẩu"
+      ],
+      "openDialogs": [],
+      "apiCalls": [],
+      "finalUrl": "http://localhost:4000/login",
+      "screenshot": "D:\\AutoUITest\\knowledge\\screenshots\\login--empty-submit.png"
+    },
+    {
+      "name": "wrong-password",
+      "description": "Login with an invalid password to capture the error alert",
+      "steps": [
+        "fill label=\"Tên đăng nhập\" = \"admin\"",
+        "fill label=\"Mật khẩu\" = \"wrong-password\"",
+        "click role=button[name=\"Đăng nhập\"]",
+        "waitFor role=alert"
+      ],
+      "newElements": [],
+      "appearedTexts": [
+        "Tên đăng nhập hoặc mật khẩu không đúng"
+      ],
+      "openDialogs": [],
+      "apiCalls": [
+        "POST /api/login"
+      ],
+      "finalUrl": "http://localhost:4000/login",
+      "screenshot": "D:\\AutoUITest\\knowledge\\screenshots\\login--wrong-password.png"
+    }
+  ],
+  "apiCalls": []
+}

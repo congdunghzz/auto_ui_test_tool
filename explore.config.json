@@ -1,0 +1,183 @@
+{
+  "baseURL": "${BASE_URL}",
+  "testIdAttribute": "data-testid",
+  "auth": {
+    "loginPath": "/login",
+    "steps": [
+      {
+        "action": "fill",
+        "target": {
+          "label": "Tên đăng nhập"
+        },
+        "value": "${QA_USERNAME}"
+      },
+      {
+        "action": "fill",
+        "target": {
+          "label": "Mật khẩu"
+        },
+        "value": "${QA_PASSWORD}"
+      },
+      {
+        "action": "click",
+        "target": {
+          "role": "button",
+          "name": "Đăng nhập"
+        }
+      },
+      {
+        "action": "waitForURL",
+        "value": "**/dashboard"
+      }
+    ],
+    "saveStorageStateTo": ".auth/explorer.json"
+  },
+  "publicPaths": [
+    "/login"
+  ],
+  "startPaths": [
+    "/dashboard",
+    "/orders/1"
+  ],
+  "variants": [
+    {
+      "path": "/orders/2",
+      "name": "orders-detail--completed",
+      "description": "Order in status \"Hoàn thành\" (seed order DH0002): no \"Đánh dấu hoàn thành\" button"
+    }
+  ],
+  "exclude": [
+    "logout",
+    "delete",
+    "remove",
+    "^/api/"
+  ],
+  "maxPages": 30,
+  "screenshots": true,
+  "states": [
+    {
+      "path": "/login",
+      "name": "empty-submit",
+      "description": "Submit the login form with empty fields to capture validation messages",
+      "steps": [
+        {
+          "action": "click",
+          "target": {
+            "role": "button",
+            "name": "Đăng nhập"
+          }
+        }
+      ]
+    },
+    {
+      "path": "/login",
+      "name": "wrong-password",
+      "description": "Login with an invalid password to capture the error alert",
+      "steps": [
+        {
+          "action": "fill",
+          "target": {
+            "label": "Tên đăng nhập"
+          },
+          "value": "${QA_USERNAME}"
+        },
+        {
+          "action": "fill",
+          "target": {
+            "label": "Mật khẩu"
+          },
+          "value": "wrong-password"
+        },
+        {
+          "action": "click",
+          "target": {
+            "role": "button",
+            "name": "Đăng nhập"
+          }
+        },
+        {
+          "action": "waitFor",
+          "target": {
+            "role": "alert"
+          }
+        }
+      ]
+    },
+    {
+      "path": "/customers",
+      "name": "add-customer-modal",
+      "description": "Open the add-customer modal",
+      "steps": [
+        {
+          "action": "click",
+          "target": {
+            "testId": "btn-add-customer"
+          }
+        }
+      ]
+    },
+    {
+      "path": "/customers",
+      "name": "add-customer-empty-submit",
+      "description": "Submit the add-customer form empty (rejected by validation, creates nothing)",
+      "steps": [
+        {
+          "action": "click",
+          "target": {
+            "testId": "btn-add-customer"
+          }
+        },
+        {
+          "action": "click",
+          "target": {
+            "within": {
+              "role": "dialog"
+            },
+            "role": "button",
+            "name": "Lưu"
+          }
+        },
+        {
+          "action": "wait",
+          "value": 600
+        }
+      ]
+    },
+    {
+      "path": "/customers",
+      "name": "delete-confirm",
+      "description": "Open the delete confirmation for the first row WITHOUT confirming",
+      "steps": [
+        {
+          "action": "click",
+          "target": {
+            "within": {
+              "role": "table"
+            },
+            "role": "button",
+            "name": "Xóa",
+            "nth": 0
+          }
+        }
+      ]
+    },
+    {
+      "path": "/orders/new",
+      "name": "empty-submit",
+      "description": "Submit the order form without choosing a customer (rejected, creates nothing)",
+      "steps": [
+        {
+          "action": "click",
+          "target": {
+            "role": "button",
+            "name": "Tạo đơn"
+          }
+        },
+        {
+          "action": "wait",
+          "value": 600
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+Mã TC,Tính năng,Kịch bản,Loại,Độ ưu tiên,Tags,Điều kiện tiên quyết,Dữ liệu test,Các bước,Kết quả mong đợi
+TC-ORD-001,order,Tạo đơn hàng hợp lệ,positive,high,smoke,Đã đăng nhập,"Khách hàng: Trần Thị Bình
+Sản phẩm: Chuột không dây M2
+Số lượng: 3
+Thanh toán: Chuyển khoản","1. Mở màn hình Tạo đơn hàng
+2. Chọn khách hàng, sản phẩm, nhập số lượng, chọn phương thức thanh toán
+3. Nhấn ""Tạo đơn""","Chuyển sang trang chi tiết đơn hàng
+Hiển thị thông báo ""Đã tạo đơn hàng DHxxxx""
+Chi tiết hiển thị đúng khách hàng, sản phẩm, số lượng 3, thanh toán Chuyển khoản, trạng thái ""Chờ xử lý"""
+TC-ORD-002,order,Không chọn khách hàng,negative,high,validation,Đã đăng nhập,—,"1. Mở màn hình Tạo đơn hàng
+2. Không chọn khách hàng
+3. Nhấn ""Tạo đơn""","Hiển thị ""Vui lòng chọn khách hàng""
+Vẫn ở trang Tạo đơn hàng"
+TC-ORD-003,order,Kiểm tra biên số lượng,boundary,medium,validation,Đã đăng nhập,"0 → lỗi
+101 → lỗi
+1 → hợp lệ
+100 → hợp lệ",1. Mở màn hình Tạo đơn hàng và chọn khách hàng Nguyễn Văn An,"Giá trị 0 và 101: hiển thị ""Số lượng phải từ 1 đến 100"""
+,,,,,,,,2. Nhập từng giá trị số lượng theo test data,"Giá trị 1 và 100: tạo đơn thành công, hiển thị ""Đã tạo đơn hàng"""
+,,,,,,,,"3. Nhấn ""Tạo đơn""",
+TC-ORD-004,order,Tính tổng tiền có giao hàng nhanh,positive,medium,,Đã đăng nhập,"Sản phẩm: Bàn phím cơ K1 (850.000đ)
+Số lượng: 2
+Giao hàng nhanh: có","1. Mở màn hình Tạo đơn hàng
+2. Chọn sản phẩm, nhập số lượng
+3. Tick ""Giao hàng nhanh""","Tổng tiền hiển thị ""1.730.000đ"""
+TC-ORD-005,order,Lọc đơn hàng theo tab Hoàn thành,positive,low,search,Có đơn hàng ở trạng thái Hoàn thành (dữ liệu mẫu),—,"1. Mở màn hình Đơn hàng
+2. Chọn tab ""Hoàn thành""","Tab ""Hoàn thành"" được chọn
+Mọi dòng trong bảng có trạng thái ""Hoàn thành"""
+TC-ORD-006,order,Luồng đầy đủ: tạo khách hàng mới rồi tạo và hoàn thành đơn hàng,workflow,high,"smoke, e2e",Đã đăng nhập,Khách hàng mới (duy nhất); Sản phẩm: Màn hình 24 inch; Số lượng: 1,"1. Thêm khách hàng mới ở màn hình Khách hàng
+2. Tạo đơn hàng cho khách hàng đó
+3. Mở màn hình Đơn hàng, tab ""Chờ xử lý""
+4. Mở chi tiết đơn vừa tạo, nhấn ""Đánh dấu hoàn thành""","Bước 3: đơn vừa tạo có trong tab ""Chờ xử lý"" với tên khách hàng mới
+Bước 4: trạng thái đơn chuyển thành ""Hoàn thành"", hiển thị ""Đã cập nhật trạng thái đơn hàng"""
+TC-ORD-007,order,In hóa đơn PDF,positive,low,,Có đơn hàng ở trạng thái Hoàn thành,—,"1. Mở chi tiết một đơn hàng Hoàn thành
+2. Nhấn ""In hóa đơn""",File PDF hóa đơn được tải về đúng mẫu công ty

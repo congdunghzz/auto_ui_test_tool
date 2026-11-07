@@ -1,0 +1,7 @@
+﻿"ID","Feature","Title","Type","Priority","Tags","Preconditions","Test data","Steps","Expected"
+"TC-ORD-101","order","Tạo đơn hàng hợp lệ","positive","high","smoke","Đã đăng nhập","Khách hàng: Nguyễn Văn An
+Số lượng: 2","1. Mở màn hình Tạo đơn hàng
+2. Chọn khách hàng
+3. Nhập số lượng
+4. Nhấn ""Tạo đơn""","Chuyển sang trang chi tiết đơn hàng
+Hiển thị thông báo ""Đã tạo đơn hàng ..."""

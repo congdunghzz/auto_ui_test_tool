@@ -1,0 +1,31 @@
+{
+  "name": "qa-automation",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AI-assisted QA automation: AI explores the UI and writes Playwright tests; Playwright runs them without an LLM.",
+  "type": "commonjs",
+  "scripts": {
+    "demo:app": "node demo-app/server.js",
+    "status": "tsx scripts/status.ts",
+    "project:init": "tsx scripts/init-project.ts",
+    "explore": "tsx scripts/explore.ts",
+    "testcases:import": "tsx scripts/import-testcases.ts",
+    "testcases:template": "tsx scripts/import-testcases.ts --template",
+    "coverage": "tsx scripts/coverage.ts",
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "report": "playwright show-report reports/html",
+    "analyze": "tsx scripts/analyze-failures.ts",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.0",
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "exceljs": "^4.4.0"
+  }
+}

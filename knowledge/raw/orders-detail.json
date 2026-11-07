@@ -1,0 +1,348 @@
+{
+  "name": "orders-detail",
+  "route": "/orders/:id",
+  "url": "http://localhost:4000/orders/1",
+  "finalUrl": "http://localhost:4000/orders/1",
+  "requiresAuth": true,
+  "exploredAt": "2026-11-07T11:57:52.432Z",
+  "title": "Đơn hàng DH0001 · QA Demo Shop",
+  "headings": [
+    {
+      "level": 1,
+      "text": "Đơn hàng DH0001"
+    }
+  ],
+  "elements": [
+    {
+      "idx": "1",
+      "tag": "button",
+      "role": "button",
+      "inputType": null,
+      "name": "Đăng xuất",
+      "label": null,
+      "placeholder": null,
+      "testId": null,
+      "id": "logout-btn",
+      "nameAttr": null,
+      "value": null,
+      "text": "Đăng xuất",
+      "href": null,
+      "required": false,
+      "disabled": false,
+      "checked": null,
+      "selected": null,
+      "current": null,
+      "constraints": {
+        "type": "button"
+      },
+      "options": null,
+      "group": null,
+      "form": null,
+      "container": null,
+      "rowScoped": null,
+      "selector": "page.getByRole('button', { name: 'Đăng xuất' })",
+      "strategy": "role",
+      "scope": "page"
+    },
+    {
+      "idx": "2",
+      "tag": "a",
+      "role": "link",
+      "inputType": null,
+      "name": "Tổng quan",
+      "label": null,
+      "placeholder": null,
+      "testId": null,
+      "id": null,
+      "nameAttr": null,
+      "value": null,
+      "text": "Tổng quan",
+      "href": "/dashboard",
+      "required": false,
+      "disabled": false,
+      "checked": null,
+      "selected": null,
+      "current": null,
+      "constraints": {},
+      "options": null,
+      "group": null,
+      "form": null,
+      "container": {
+        "role": "navigation",
+        "name": "Menu chính"
+      },
+      "rowScoped": null,
+      "selector": "page.getByRole('link', { name: 'Tổng quan' })",
+      "strategy": "role",
+      "scope": "page"
+    },
+    {
+      "idx": "3",
+      "tag": "a",
+      "role": "link",
+      "inputType": null,
+      "name": "Khách hàng",
+      "label": null,
+      "placeholder": null,
+      "testId": null,
+      "id": null,
+      "nameAttr": null,
+      "value": null,
+      "text": "Khách hàng",
+      "href": "/customers",
+      "required": false,
+      "disabled": false,
+      "checked": null,
+      "selected": null,
+      "current": null,
+      "constraints": {},
+      "options": null,
+      "group": null,
+      "form": null,
+      "container": {
+        "role": "navigation",
+        "name": "Menu chính"
+      },
+      "rowScoped": null,
+      "selector": "page.getByRole('link', { name: 'Khách hàng' })",
+      "strategy": "role",
+      "scope": "page"
+    },
+    {
+      "idx": "4",
+      "tag": "a",
+      "role": "link",
+      "inputType": null,
+      "name": "Đơn hàng",
+      "label": null,
+      "placeholder": null,
+      "testId": null,
+      "id": null,
+      "nameAttr": null,
+      "value": null,
+      "text": "Đơn hàng",
+      "href": "/orders",
+      "required": false,
+      "disabled": false,
+      "checked": null,
+      "selected": null,
+      "current": "page",
+      "constraints": {},
+      "options": null,
+      "group": null,
+      "form": null,
+      "container": {
+        "role": "navigation",
+        "name": "Menu chính"
+      },
+      "rowScoped": null,
+      "selector": "page.getByRole('link', { name: 'Đơn hàng' })",
+      "strategy": "role",
+      "scope": "page"
+    },
+    {
+      "idx": "5",
+      "tag": "a",
+      "role": "link",
+      "inputType": null,
+      "name": "Quay lại danh sách",
+      "label": null,
+      "placeholder": null,
+      "testId": null,
+      "id": null,
+      "nameAttr": null,
+      "value": null,
+      "text": "Quay lại danh sách",
+      "href": "/orders",
+      "required": false,
+      "disabled": false,
+      "checked": null,
+      "selected": null,
+      "current": null,
+      "constraints": {},
+      "options": null,
+      "group": null,
+      "form": null,
+      "container": null,
+      "rowScoped": null,
+      "selector": "page.getByRole('link', { name: 'Quay lại danh sách' })",
+      "strategy": "role",
+      "scope": "page"
+    },
+    {
+      "idx": "6",
+      "tag": "button",
+      "role": "button",
+      "inputType": null,
+      "name": "Đánh dấu hoàn thành",
+      "label": null,
+      "placeholder": null,
+      "testId": null,
+      "id": "complete-order",
+      "nameAttr": null,
+      "value": null,
+      "text": "Đánh dấu hoàn thành",
+      "href": null,
+      "required": false,
+      "disabled": false,
+      "checked": null,
+      "selected": null,
+      "current": null,
+      "constraints": {
+        "type": "button"
+      },
+      "options": null,
+      "group": null,
+      "form": null,
+      "container": null,
+      "rowScoped": null,
+      "selector": "page.getByRole('button', { name: 'Đánh dấu hoàn thành' })",
+      "strategy": "role",
+      "scope": "page"
+    }
+  ],
+  "rowRepeats": {},
+  "tables": [],
+  "dialogs": [],
+  "tablists": [],
+  "navs": [
+    {
+      "name": "Menu chính",
+      "isPagination": false,
+      "links": [
+        {
+          "text": "Tổng quan",
+          "href": "/dashboard",
+          "current": null
+        },
+        {
+          "text": "Khách hàng",
+          "href": "/customers",
+          "current": null
+        },
+        {
+          "text": "Đơn hàng",
+          "href": "/orders",
+          "current": "page"
+        }
+      ],
+      "controls": []
+    }
+  ],
+  "liveRegions": [
+    {
+      "role": "status",
+      "live": "polite",
+      "testId": "toast",
+      "id": "toast",
+      "visible": false,
+      "text": ""
+    }
+  ],
+  "outgoing": [
+    {
+      "text": "Tổng quan",
+      "route": "/dashboard",
+      "href": "http://localhost:4000/dashboard"
+    },
+    {
+      "text": "Khách hàng",
+      "route": "/customers",
+      "href": "http://localhost:4000/customers"
+    },
+    {
+      "text": "Đơn hàng",
+      "route": "/orders",
+      "href": "http://localhost:4000/orders"
+    },
+    {
+      "text": "Quay lại danh sách",
+      "route": "/orders",
+      "href": "http://localhost:4000/orders"
+    }
+  ],
+  "testIdElements": [
+    {
+      "testId": "current-user",
+      "tag": "span",
+      "role": null,
+      "visible": true,
+      "text": "Quản trị viên"
+    },
+    {
+      "testId": "order-customer",
+      "tag": "dd",
+      "role": null,
+      "visible": true,
+      "text": "Nguyễn Văn An"
+    },
+    {
+      "testId": "order-product",
+      "tag": "dd",
+      "role": null,
+      "visible": true,
+      "text": "Bàn phím cơ K1"
+    },
+    {
+      "testId": "order-quantity",
+      "tag": "dd",
+      "role": null,
+      "visible": true,
+      "text": "2"
+    },
+    {
+      "testId": "order-payment",
+      "tag": "dd",
+      "role": null,
+      "visible": true,
+      "text": "Tiền mặt"
+    },
+    {
+      "testId": "order-status",
+      "tag": "dd",
+      "role": null,
+      "visible": true,
+      "text": "Chờ xử lý"
+    },
+    {
+      "testId": "order-detail-total",
+      "tag": "dd",
+      "role": null,
+      "visible": true,
+      "text": "1.700.000đ"
+    },
+    {
+      "testId": "toast",
+      "tag": "div",
+      "role": "status",
+      "visible": false,
+      "text": ""
+    }
+  ],
+  "texts": [
+    "QA Demo Shop",
+    "Quản trị viên",
+    "Đăng xuất",
+    "Tổng quan",
+    "Khách hàng",
+    "Đơn hàng",
+    "Đơn hàng DH0001",
+    "Nguyễn Văn An",
+    "Sản phẩm",
+    "Bàn phím cơ K1",
+    "Số lượng",
+    "2",
+    "Thanh toán",
+    "Tiền mặt",
+    "Trạng thái",
+    "Chờ xử lý",
+    "Tổng tiền",
+    "1.700.000đ",
+    "Quay lại danh sách",
+    "Đánh dấu hoàn thành"
+  ],
+  "ariaSnapshot": "- banner:\n  - text: QA Demo Shop Quản trị viên\n  - button \"Đăng xuất\"\n- navigation \"Menu chính\":\n  - link \"Tổng quan\":\n    - /url: /dashboard\n  - link \"Khách hàng\":\n    - /url: /customers\n  - link \"Đơn hàng\":\n    - /url: /orders\n- main:\n  - heading \"Đơn hàng DH0001\" [level=1]\n  - term: Khách hàng\n  - definition: Nguyễn Văn An\n  - term: Sản phẩm\n  - definition: Bàn phím cơ K1\n  - term: Số lượng\n  - definition: \"2\"\n  - term: Thanh toán\n  - definition: Tiền mặt\n  - term: Trạng thái\n  - definition: Chờ xử lý\n  - term: Tổng tiền\n  - definition: 1.700.000đ\n  - link \"Quay lại danh sách\":\n    - /url: /orders\n  - button \"Đánh dấu hoàn thành\"",
+  "screenshot": "D:\\AutoUITest\\knowledge\\screenshots\\orders-detail.png",
+  "states": [],
+  "apiCalls": []
+}

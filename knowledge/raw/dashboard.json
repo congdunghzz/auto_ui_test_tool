@@ -1,0 +1,339 @@
+{
+  "name": "dashboard",
+  "route": "/dashboard",
+  "url": "http://localhost:4000/dashboard",
+  "finalUrl": "http://localhost:4000/dashboard",
+  "requiresAuth": true,
+  "exploredAt": "2026-11-07T11:57:51.187Z",
+  "title": "Tổng quan · QA Demo Shop",
+  "headings": [
+    {
+      "level": 1,
+      "text": "Tổng quan"
+    },
+    {
+      "level": 2,
+      "text": "Tổng khách hàng"
+    },
+    {
+      "level": 2,
+      "text": "Đơn hàng chờ xử lý"
+    },
+    {
+      "level": 2,
+      "text": "Doanh thu"
+    }
+  ],
+  "elements": [
+    {
+      "idx": "1",
+      "tag": "button",
+      "role": "button",
+      "inputType": null,
+      "name": "Đăng xuất",
+      "label": null,
+      "placeholder": null,
+      "testId": null,
+      "id": "logout-btn",
+      "nameAttr": null,
+      "value": null,
+      "text": "Đăng xuất",
+      "href": null,
+      "required": false,
+      "disabled": false,
+      "checked": null,
+      "selected": null,
+      "current": null,
+      "constraints": {
+        "type": "button"
+      },
+      "options": null,
+      "group": null,
+      "form": null,
+      "container": null,
+      "rowScoped": null,
+      "selector": "page.getByRole('button', { name: 'Đăng xuất' })",
+      "strategy": "role",
+      "scope": "page"
+    },
+    {
+      "idx": "2",
+      "tag": "a",
+      "role": "link",
+      "inputType": null,
+      "name": "Tổng quan",
+      "label": null,
+      "placeholder": null,
+      "testId": null,
+      "id": null,
+      "nameAttr": null,
+      "value": null,
+      "text": "Tổng quan",
+      "href": "/dashboard",
+      "required": false,
+      "disabled": false,
+      "checked": null,
+      "selected": null,
+      "current": "page",
+      "constraints": {},
+      "options": null,
+      "group": null,
+      "form": null,
+      "container": {
+        "role": "navigation",
+        "name": "Menu chính"
+      },
+      "rowScoped": null,
+      "selector": "page.getByRole('link', { name: 'Tổng quan' })",
+      "strategy": "role",
+      "scope": "page"
+    },
+    {
+      "idx": "3",
+      "tag": "a",
+      "role": "link",
+      "inputType": null,
+      "name": "Khách hàng",
+      "label": null,
+      "placeholder": null,
+      "testId": null,
+      "id": null,
+      "nameAttr": null,
+      "value": null,
+      "text": "Khách hàng",
+      "href": "/customers",
+      "required": false,
+      "disabled": false,
+      "checked": null,
+      "selected": null,
+      "current": null,
+      "constraints": {},
+      "options": null,
+      "group": null,
+      "form": null,
+      "container": {
+        "role": "navigation",
+        "name": "Menu chính"
+      },
+      "rowScoped": null,
+      "selector": "page.getByRole('link', { name: 'Khách hàng', exact: true })",
+      "strategy": "role",
+      "scope": "page"
+    },
+    {
+      "idx": "4",
+      "tag": "a",
+      "role": "link",
+      "inputType": null,
+      "name": "Đơn hàng",
+      "label": null,
+      "placeholder": null,
+      "testId": null,
+      "id": null,
+      "nameAttr": null,
+      "value": null,
+      "text": "Đơn hàng",
+      "href": "/orders",
+      "required": false,
+      "disabled": false,
+      "checked": null,
+      "selected": null,
+      "current": null,
+      "constraints": {},
+      "options": null,
+      "group": null,
+      "form": null,
+      "container": {
+        "role": "navigation",
+        "name": "Menu chính"
+      },
+      "rowScoped": null,
+      "selector": "page.getByRole('link', { name: 'Đơn hàng', exact: true })",
+      "strategy": "role",
+      "scope": "page"
+    },
+    {
+      "idx": "5",
+      "tag": "a",
+      "role": "link",
+      "inputType": null,
+      "name": "Xem danh sách khách hàng",
+      "label": null,
+      "placeholder": null,
+      "testId": null,
+      "id": null,
+      "nameAttr": null,
+      "value": null,
+      "text": "Xem danh sách khách hàng",
+      "href": "/customers",
+      "required": false,
+      "disabled": false,
+      "checked": null,
+      "selected": null,
+      "current": null,
+      "constraints": {},
+      "options": null,
+      "group": null,
+      "form": null,
+      "container": null,
+      "rowScoped": null,
+      "selector": "page.getByRole('link', { name: 'Xem danh sách khách hàng' })",
+      "strategy": "role",
+      "scope": "page"
+    },
+    {
+      "idx": "6",
+      "tag": "a",
+      "role": "link",
+      "inputType": null,
+      "name": "Tạo đơn hàng mới",
+      "label": null,
+      "placeholder": null,
+      "testId": null,
+      "id": null,
+      "nameAttr": null,
+      "value": null,
+      "text": "Tạo đơn hàng mới",
+      "href": "/orders/new",
+      "required": false,
+      "disabled": false,
+      "checked": null,
+      "selected": null,
+      "current": null,
+      "constraints": {},
+      "options": null,
+      "group": null,
+      "form": null,
+      "container": null,
+      "rowScoped": null,
+      "selector": "page.getByRole('link', { name: 'Tạo đơn hàng mới' })",
+      "strategy": "role",
+      "scope": "page"
+    }
+  ],
+  "rowRepeats": {},
+  "tables": [],
+  "dialogs": [],
+  "tablists": [],
+  "navs": [
+    {
+      "name": "Menu chính",
+      "isPagination": false,
+      "links": [
+        {
+          "text": "Tổng quan",
+          "href": "/dashboard",
+          "current": "page"
+        },
+        {
+          "text": "Khách hàng",
+          "href": "/customers",
+          "current": null
+        },
+        {
+          "text": "Đơn hàng",
+          "href": "/orders",
+          "current": null
+        }
+      ],
+      "controls": []
+    }
+  ],
+  "liveRegions": [
+    {
+      "role": "status",
+      "live": "polite",
+      "testId": "toast",
+      "id": "toast",
+      "visible": false,
+      "text": ""
+    }
+  ],
+  "outgoing": [
+    {
+      "text": "Tổng quan",
+      "route": "/dashboard",
+      "href": "http://localhost:4000/dashboard"
+    },
+    {
+      "text": "Khách hàng",
+      "route": "/customers",
+      "href": "http://localhost:4000/customers"
+    },
+    {
+      "text": "Đơn hàng",
+      "route": "/orders",
+      "href": "http://localhost:4000/orders"
+    },
+    {
+      "text": "Xem danh sách khách hàng",
+      "route": "/customers",
+      "href": "http://localhost:4000/customers"
+    },
+    {
+      "text": "Tạo đơn hàng mới",
+      "route": "/orders/new",
+      "href": "http://localhost:4000/orders/new"
+    }
+  ],
+  "testIdElements": [
+    {
+      "testId": "current-user",
+      "tag": "span",
+      "role": null,
+      "visible": true,
+      "text": "Quản trị viên"
+    },
+    {
+      "testId": "stat-customers",
+      "tag": "p",
+      "role": null,
+      "visible": true,
+      "text": "12"
+    },
+    {
+      "testId": "stat-pending-orders",
+      "tag": "p",
+      "role": null,
+      "visible": true,
+      "text": "3"
+    },
+    {
+      "testId": "stat-revenue",
+      "tag": "p",
+      "role": null,
+      "visible": true,
+      "text": "1.280.000đ"
+    },
+    {
+      "testId": "toast",
+      "tag": "div",
+      "role": "status",
+      "visible": false,
+      "text": ""
+    }
+  ],
+  "texts": [
+    "QA Demo Shop",
+    "Quản trị viên",
+    "Đăng xuất",
+    "Tổng quan",
+    "Khách hàng",
+    "Đơn hàng",
+    "Tổng khách hàng",
+    "12",
+    "Đơn hàng chờ xử lý",
+    "3",
+    "Doanh thu",
+    "1.280.000đ",
+    "Xem danh sách khách hàng",
+    "·",
+    "Tạo đơn hàng mới"
+  ],
+  "ariaSnapshot": "- banner:\n  - text: QA Demo Shop Quản trị viên\n  - button \"Đăng xuất\"\n- navigation \"Menu chính\":\n  - link \"Tổng quan\":\n    - /url: /dashboard\n  - link \"Khách hàng\":\n    - /url: /customers\n  - link \"Đơn hàng\":\n    - /url: /orders\n- main:\n  - heading \"Tổng quan\" [level=1]\n  - region \"Thống kê\":\n    - article:\n      - heading \"Tổng khách hàng\" [level=2]\n      - paragraph: \"12\"\n    - article:\n      - heading \"Đơn hàng chờ xử lý\" [level=2]\n      - paragraph: \"3\"\n    - article:\n      - heading \"Doanh thu\" [level=2]\n      - paragraph: 1.280.000đ\n  - paragraph:\n    - link \"Xem danh sách khách hàng\":\n      - /url: /customers\n    - text: ·\n    - link \"Tạo đơn hàng mới\":\n      - /url: /orders/new",
+  "screenshot": "D:\\AutoUITest\\knowledge\\screenshots\\dashboard.png",
+  "states": [],
+  "apiCalls": [
+    "GET /api/stats"
+  ]
+}
